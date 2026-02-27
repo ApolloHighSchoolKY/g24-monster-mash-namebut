@@ -22,7 +22,10 @@ public class Animal
 	     */
 	    public Animal()
 	    {
-
+			//default placement variables
+			age = 0;
+			alive = true;
+			sound = "*animal noises*";
 	    }
 
 	    /**
@@ -31,7 +34,11 @@ public class Animal
 	    */
         public boolean isAlive()
     	{
-
+			if(alive == true)
+			{
+				return true;
+			}
+			return false;
     	}
 
      	/**
@@ -39,16 +46,32 @@ public class Animal
      	*/
      	public void kill()
      	{
-
+				if(age > 40)
+				{	
+					alive = false;
+				}
+				else
+				{
+					alive = true;
+				}
      	}
 
      	/**
      	* Have the animal make a noise
      	* @return the string that is the animals sound it makes
      	*/
+		public void soundType (String soundType)
+		{
+			sound = soundType;
+		}
+
+		public void ageYears (int ageYears)
+		{
+			age = ageYears;
+		}
      	public String speak()
      	{
-     		return "";
+     		return sound;
      	}
 
      	/**
@@ -58,6 +81,13 @@ public class Animal
      	*/
      	public String toString()
      	{
-     		return "";
+			if(alive == true)
+			{
+				return "This animal is " + age + " year(s) old! And goes: " + sound + "\n";
+			}
+			else
+			{
+				return "This animal was " + age + " before its passing. R.I.P.\n";
+			}
      	}
 }

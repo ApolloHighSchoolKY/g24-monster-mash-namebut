@@ -9,6 +9,6 @@ public class Witch extends Monster {
     }
 
     public String fly(){
-        return getName() + " went flying away, cackling.";
+        return getName() + " went flying away, cackling.\n";
     }
 }

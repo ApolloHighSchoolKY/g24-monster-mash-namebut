@@ -3,14 +3,13 @@ public class Karen extends Monster {
         super(name);
     }
         
-    }
     //Override kill
     public String kill(){
         return getName() + " nagged another victim to death.\n";
     }
 
     public String getManager(){
-        return getName() + " got another poor worker fired (with real fire).";
+        return getName() + " got another poor worker fired (with real fire).\n";
     }
 
 }

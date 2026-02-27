@@ -27,5 +27,13 @@ public class MonsterMash{
     System.out.println(karen.kill());
 
     System.out.println(karen.getManager());
+
+    Skeleton skelly = new Skeleton();
+
+    System.out.println(skelly);
+
+    skelly = new Skeleton("Giant Skelly");
+
+    System.out.println(skelly);
   }
 }
